@@ -332,7 +332,7 @@ int apnoncecon = 0;
         });
         // Send recovery commands now
         ret = [apnonceDevice
-            sendCMD:[NSString stringWithFormat:@"setenv com.apple.System-boot.nonce %@", generatorString]];
+            sendCMD:[NSString stringWithFormat:@"setenv com.apple.System.boot-nonce %@", generatorString]];
         ret = [apnonceDevice sendCMD:@"saveenv"];
         ret = [apnonceDevice sendCMD:@"setenv auto-boot false"];
         ret = [apnonceDevice sendCMD:@"saveenv"];
